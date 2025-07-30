@@ -203,8 +203,8 @@ RunService.Stepped:Connect(function()
             if UserInputService:IsKeyDown(Enum.KeyCode.LeftControl) then
                 moveVector = moveVector - Vector3.new(0, 1, 0)
             end
-
-if moveVector.Magnitude > 0 then
+            
+            if moveVector.Magnitude > 0 then
                 moveVector = moveVector.Unit * NoclipController.Speed
                 ObfuscatedSetProperty(hrp, "CFrame", hrp.CFrame + moveVector)
             end
@@ -228,8 +228,8 @@ spawn(function()
             -- Ложные вызовы API
             workspace:GetRealPhysicsFPS()
             game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValue()
-        end
+        end)
     end
 end)
 
-warn("CoreFly NOCLIP v6.2 initialized | by nixsize | special thanks to impaer")k
+warn("CoreFly NOCLIP v6.2 initialized | by nixsize | special thanks to impaer")
